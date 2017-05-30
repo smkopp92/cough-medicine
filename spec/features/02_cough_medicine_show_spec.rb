@@ -23,7 +23,7 @@ feature "User sees specific cough medicine info" do
     visit "/cough_medicines/#{cough_medicine.id}"
 
     expect(page).to have_content "Name: Fairy in a Bottle"
-    expect(page).to have_content "Recommended Dose: 1 Bottle"
-    expect(page).to have_content "Tastiness: 5"
+    expect(page).to have_content "Recommended Dose: 6 scoops"
+    expect(page).to have_content "Tastiness: 6"
   end
 end

@@ -21,6 +21,12 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
-  @title = "Hello World"
+  @cough_medicines = CoughMedicine.all
   erb :index
+end
+
+get '/cough_medicines/:id' do
+  id = params[:id]
+  @cough_medicine = CoughMedicine.find(id)
+  erb :show
 end
